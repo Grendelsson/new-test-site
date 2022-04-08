@@ -1,7 +1,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em url("../fonts/orkney-regular.otf"), verdana, sans-serif;
+  font: 112.5%/1.45em Orkney, verdana, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: url("../fonts/orkney-regular.otf"), verdana, sans-serif;
+  font-family: Orkney, verdana, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -594,4 +594,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+@font-face {
+  font-family: "Orkney";
+  src: local("Orkney"), url("../fonts/orkney-regular.otf") format("opentype");
 }
