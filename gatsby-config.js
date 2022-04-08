@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: "/new-test-site",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Real naff site`,
     description: `Nonsense site full of rubbish.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://grendelsson.github.io/new-test-site/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,7 +29,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/AntiFun.jpg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
