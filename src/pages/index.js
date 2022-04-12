@@ -10,7 +10,7 @@ const IndexPage = () => (
     <Seo title="Home" />
     <h1>Rubbish site</h1>
     <p>Let's see if I can change the template content</p>
-    <p>...not sure what to yet</p>
+    <p>...not sure what to write yet</p>
     <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}
