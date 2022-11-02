@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const DesignSystemTest = () => (
   <Layout>
-    <Seo title="404: Not found" />
+    <Seo title="Design System tracking tests" />
     <nav class="stacked-nav" data-component="stacked-nav">
         <ul class="stacked-nav__list">
             <li class="stacked-nav__list-item">
