@@ -4,6 +4,13 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav"
 import { Link } from "gatsby"
+import {
+	FilterSummary,
+	FilterPanel,
+	FilterGroup,
+	FilterOption,
+	FilterByInput
+} from "@nice-digital/nds-filters";
 
 const setOfLinksToNest = (
   <>
@@ -19,6 +26,10 @@ const setOfLinksToNest = (
   </>
 );
 
+const onChanged = () => {
+  console.log("onchanged");
+}
+
 const DesignSystemTest = () => (
   <Layout>
     <Seo title="Design System tracking tests" />
@@ -33,8 +44,27 @@ const DesignSystemTest = () => (
         </StackedNavLink>
         <StackedNavLink data-level="1" to="#about" data-text="About Page" label="About Page"/>
         <StackedNavLink data-level="1" to="#contact" data-text="Contact Page" label="Contact Page"/>
-        
     </StackedNav>
+    <FilterPanel>
+      <FilterGroup heading="Group" id="ProductType">
+        <FilterByInput>
+        </FilterByInput>
+        <FilterOption isSelected={true} onChanged={onChanged}>
+          Hello
+        </FilterOption>
+        <FilterOption isSelected={true} onChanged={onChanged}>
+          There
+        </FilterOption>
+      </FilterGroup>
+      <FilterGroup heading="Group" id="ProductType">
+        <FilterOption isSelected={true} onChanged={onChanged}>
+          option 3
+        </FilterOption>
+        <FilterOption isSelected={true} onChanged={onChanged}>
+          option 4
+        </FilterOption>
+      </FilterGroup>
+    </FilterPanel>
   </Layout>
 )
 
