@@ -45,22 +45,22 @@ const DesignSystemTest = () => (
         <StackedNavLink data-level="1" to="#about" data-text="About Page" label="About Page"/>
         <StackedNavLink data-level="1" to="#contact" data-text="Contact Page" label="Contact Page"/>
     </StackedNav>
-    <FilterPanel>
-      <FilterGroup heading="Group" id="ProductType">
+    <FilterPanel data-component="filter-panel">
+      <FilterGroup heading="Group" data-level="1" id="ProductType">
         <FilterByInput>
         </FilterByInput>
-        <FilterOption isSelected={true} onChanged={onChanged}>
+        <FilterOption  data-level="2" data-text="Hello" isSelected={true} onChanged={onChanged}>
           Hello
         </FilterOption>
-        <FilterOption isSelected={true} onChanged={onChanged}>
+        <FilterOption  data-level="2" data-text="There" isSelected={true} onChanged={onChanged}>
           There
         </FilterOption>
       </FilterGroup>
-      <FilterGroup heading="Group" id="ProductType">
-        <FilterOption isSelected={true} onChanged={onChanged}>
+      <FilterGroup heading="Group" data-level="1" id="ProductType">
+        <FilterOption data-level="2" data-text="option 3" isSelected={true} onChanged={onChanged}>
           option 3
         </FilterOption>
-        <FilterOption isSelected={true} onChanged={onChanged}>
+        <FilterOption data-level="2" data-text="option 4" isSelected={true} onChanged={onChanged}>
           option 4
         </FilterOption>
       </FilterGroup>
