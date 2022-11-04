@@ -2,44 +2,25 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav"
+import { Link } from "gatsby"
 
 const DesignSystemTest = () => (
   <Layout>
     <Seo title="Design System tracking tests" />
-    <nav class="stacked-nav" data-component="stacked-nav">
-        <ul class="stacked-nav__list">
-            <li class="stacked-nav__list-item">
-            <a aria-current="false" data-level={1} data-text="top level" href="#1">
-                <span class="stacked-nav__content-wrapper">Top level</span>
-            </a>
-            <ul class="stacked-nav__nested">
-                <li class="stacked-nav__list-item">
-                <a aria-current="false" data-level={2} data-text="nested link one" href="#2">
-                    <span class="stacked-nav__content-wrapper">
-                    Nested link one
-                    <span class="stacked-nav__hint">hint text</span>
-                    </span>
-                </a>
-                </li>
-                <li class="stacked-nav__list-item">
-                <a aria-current="false" data-level={2} data-text="nested link two" href="#3">
-                    <span class="stacked-nav__content-wrapper">Nested link two</span>
-                </a>
-                <ul class="stacked-nav__nested">
-                    <li class="stacked-nav__list-item">
-                    <a aria-current="false" data-level={3} data-text="deep nested link" href="#4">
-                        <span class="stacked-nav__content-wrapper">
-                        Deep nested link
-                        <span class="stacked-nav__hint">hint text</span>
-                        </span>
-                    </a>
-                    </li>
-                </ul>
-                </li>
-            </ul>
-            </li>
-        </ul>
-        </nav>
+    <StackedNav label="Explore our site" elementType="h2">
+        <StackedNavLink to="#about">About Page</StackedNavLink>
+        <StackedNavLink to="#contact">Contact Page</StackedNavLink>
+    </StackedNav>
+
+    <StackedNav
+        label="Explore our site"
+        elementType="h3"
+        link={{ destination: "#sitemap", isCurrent: true, elementType: Link }}
+    >
+        <StackedNavLink to="#about" label="About Page"/>
+        <StackedNavLink to="#contact" label="Contact Page"/>
+    </StackedNav>
   </Layout>
 )
 
